@@ -25,7 +25,7 @@ public class MathUtilityAdvancedTest {
                                {1, 1},
                                {2, 2},
                                {4, 24},
-                               {5, 120}};
+                               {6, 720}};
         return  testData;
     }
     @ParameterizedTest
@@ -36,7 +36,7 @@ public class MathUtilityAdvancedTest {
         
 }
  public static long getFactorial(int n) {
-        if (n < 0 || n > 21) 
+        if (n < 0 || n > 20) 
             throw new IllegalArgumentException("Invalid n. n must be betweent 0..20, please");
         
         if (n == 0 || n == 1) 
