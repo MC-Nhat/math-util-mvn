@@ -25,7 +25,7 @@ public class MathUtilityAdvancedTest {
                                {1, 1},
                                {2, 2},
                                {4, 24},
-                               {5, 1200}};
+                               {5, 120}};
         return  testData;
     }
     @ParameterizedTest
@@ -35,6 +35,17 @@ public class MathUtilityAdvancedTest {
         assertEquals(expected, MathUtility.getFactorial(n));
         
 }
+ public static long getFactorial(int n) {
+        if (n < 0 || n > 21) 
+            throw new IllegalArgumentException("Invalid n. n must be betweent 0..20, please");
+        
+        if (n == 0 || n == 1) 
+            return 1;
+            
+            return n * getFactorial(n-1);
+            //công thuc de quy
+        }
+ }
  // TDD : test Driven Development là ki thuât lâp trình ma 
  //   gan liên vs viêc viêt các test case dê tìm kiêm thu ngay nhung hàm  dev mình vua viêt
  //   Viêt code chính và viêt code test (JUnit,Unit Test) xen ke
@@ -46,4 +57,3 @@ public class MathUtilityAdvancedTest {
  // tách vào file Excel, hay table, sa dó nhôi/fill/map
  //  cái data tu mang này trong hàm so sánh
  // giúp code de doc hon
-}
